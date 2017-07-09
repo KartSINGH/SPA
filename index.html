@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shuttlescrap | waste management company | Sell used products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="CSS/mdb.css">
+    <link rel="stylesheet" type="text/css" href="CSS/cs.css">
+    <script type="text/javascript" src="js/jquery-2.2.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#final').css('display', 'none');
+            $('.quote2').hide();
+            $('.quote3').hide();
+            function call() {
+                $('.quote2').hide();
+                $('.quote3').hide();
+                $('.quote1').fadeOut(1000, function () {
+                    $('.quote2').fadeIn(3000, function () {
+                        $('.quote2').fadeOut(1000, function () {
+                            $('.quote3').fadeIn(3000, function () {
+                                $('.quote3').fadeOut(1000, function () {
+                                    $('.quote1').fadeIn(3000, function () {
+                                        call();
+                                    });
+                                })
+                            })
+                        })
+                    })
+                })
+            }
+            call();
+        });
+    </script>
+    <style>
+        .my_button{
+            border:2px solid #22aa86;
+            background-color:transparent;
+            line-height:3;
+            transition: background-color 1s;
+        }
+        .my_button:hover{
+            border:2px solid #22aa86;
+            background-color:#22aa86;
+            color:white;
+            line-height:3
+        }
+    </style>
+</head>
+<body>
+    <div id="waiting" class="flex-center flex-column">
+        <img src="loading 1.gif" style="height:300px;width:400px" class="mx-auto">
+        <p>&nbsp;</p>
+        <h2>Loading ... </h2>
+        <p>&nbsp;</p>
+    </div>
+    <div id="final" class="flex-center flex-column">
+        <img src="tick.gif" style="height:300px;width:400px" class="mx-auto">
+        <p>&nbsp;</p>
+        <h2>You have been Subscribed </h2>
+        <p>&nbsp;</p>
+        <button type="button" class="btn waves-effect" style="border:2px solid #22aa86;background-color:white;color:black" id="close"><span style="color:black">Close</span></button>
+    </div>
+    <div class="slide1">
+        <h1>PAGE 1</h1>
+    </div>
+    <div class="slide2">
+        <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" playsinline autoplay muted loop>
+            <source src="" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="row content_div">
+                <div class=" d-flex justify-content-center col-md-5 column_1">
+                    <div class="p-2 mx-auto logo_div">
+                        <img src="img/png/logo.png">
+                    </div>
+                </div>
+                <div class="col-md-7 column_2 text-center" id="particles-js" style="padding:100px">
+
+                    <script src="js/particles.js"></script>
+                    <script src="js/app.js"></script>
+                    <div class="row">
+                        <div class="col-md-12" style="margin-top:8vh">
+                            <h1>Shuttlescrap</h1>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <h2 class="">Something Big is Coming to <span style="color:#22aa86">your Doorsteps!</span></h2>
+                    <p>&nbsp;</p>
+                    <div style="height:70px">
+                        <div class="quote1">
+                            <h3 style="color:white">Fitness is not about being better than someone else...<span style="color:#22aa86"> It's about being better than you used to be.</span>
+                            </h3>
+                        </div>
+                        <div class="quote2">
+                            <h3 style="color:white"> <span style="color:#22aa86">Recycled paper produces 73% less air pollution</span> than if it was made from raw materials.
+                            </h3>
+                        </div>
+                        <div class="quote3">
+                            <h3 style="color:white">If you can make it that far, what's stopping you from<span style="color:#22aa86">  one more mile or one more set of reps?</span></h3>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="md-form">
+                        <i class="fa fa-envelope prefix"></i>
+                        <button type="button" class="btn waves-effect sub my_button" data-toggle="modal" data-target="#myModal" >Schedule a pickup for your Scrap</button>
+
+                       <a href="https://www.facebook.com/shuttlescrap/"> <button type="button" class="btn waves-effect sub my_button" >Visit us on Facebook</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal fade" role="dialog"  >
+  <div class="modal-dialog" style="height:100vh;width:100vh;overflow:inherit">
+
+    <!-- Modal content-->
+    <div class="modal-content" >
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Scrap Pickup Form</h4>
+      </div>
+     <div>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfvKMmIWWltqIaTWI0iKyBwDRD4vzbGdxIqWB7a9KFcHFyy3g/viewform?embedded=true" width="500" height="500"  frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+    <script type="text/javascript" src="js/tether.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="./js/mdb.min.js"></script>
+    <script type="text/javascript">
+        console.log("Hello");
+        $('.sub').on('click', function () {
+            var email = document.getElementById("email").value;
+            console.log("user enetered " + email);
+            console.log("Click called");
+             $('#waiting').fadeIn();
+            if (email==""){
+                alert("Please Enter an Email");
+            }
+
+            
+               /* $.ajax({
+                    url: "http://api.shuttlescrap.com/register/all_users",
+                    type: "GET",
+                    success: function (res) {
+                       
+                        console.log("success");
+                    },
+                    error: function () {
+                        console.log("Error");
+                        alert("ERROR");
+                    }
+                });*/
+           else{
+            $.post("http://localhost:8880/raise-request/submit-request", {
+                    user_email: email
+                },
+                function (data, status) {
+                     $('#waiting').fadeOut(1000,function(){
+                         $('#final').fadeIn();
+                     });
+                    console.log("i got this from server : "+data);
+                    
+                });
+           }
+        });
+        
+        $('#close').on('click', function () {
+            console.log("close button called");
+            $('#final').fadeOut(1000, function () {
+                $('#final').hide();
+            });
+        });
+        
+    </script>
+</body>
+</html>
